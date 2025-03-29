@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import {Routes, Route} from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import Home from "./pages/Home";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
@@ -14,7 +14,7 @@ function App(){
     <div className="min-h-screen bg-gray-100">
       <Navbar/>
       <Routes>
-        <Route path="/" element={<HomePage/>} />
+        <Route path="/" element={<Home/>} />
         <Route path="product/:id" element={<ProductPage/>} />
         <Route path="cart" element={<CartPage/>} />
         <Route path="checkout" element={<CheckoutPage/>} />
