@@ -3,6 +3,7 @@ from .views import (
     CategoryListCreateView, CategoryDetailView, 
     ProductListCreateView, ProductDetailView
 )
+from .views import signup, login, logout
 
 
 urlpatterns = [
@@ -14,4 +15,8 @@ urlpatterns = [
     #product endpoints
     path('products/', ProductListCreateView.as_view(), name='product-list-create'),
     path('product/<int:pk>/', ProductDetailView.as_view(), name='product-details'),
+
+    path('signup/', signup, name='signup'),
+    path('login/', login, name='login'),
+    path('logout/', logout, name='logout'),
 ]
